@@ -18,7 +18,7 @@ class ValueRepository(private val database: AppDatabase) {
 
     suspend fun refreshValues() {
         withContext(Dispatchers.IO) {
-            val values = Network.apiBitCoin.getBitCoinValuesAsync("1days").await()
+            val values = Network.apiBitcoin.getBitcoinValuesAsync("1weeks").await()
             database.valueDao().insertAll(*values.asDatabaseModel())
         }
     }

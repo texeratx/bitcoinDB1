@@ -6,7 +6,8 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class NetworkValue(
     @Json(name = "x")
-    val time: String,
+    val time: Long,
     @Json(name = "y")
-    val value: String
+    val value: Double
+
 )

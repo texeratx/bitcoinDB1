@@ -12,9 +12,11 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 
-interface APIBitCoin {
-    @GET("charts/transactions-per-second")
-    fun getBitCoinValuesAsync(@Query("timespan") timespan: String): Deferred<BitCoin>
+interface APIBitcoin {
+    @GET("charts/market-price")
+    fun getBitcoinValuesAsync(
+        @Query("timespan") timespan: String
+    ): Deferred<Bitcoin>
 }
 
 private val moshi = Moshi.Builder()
@@ -34,5 +36,5 @@ object Network {
         .client(okHttpClient)
         .build()
 
-    val apiBitCoin = retrofit.create(APIBitCoin::class.java)
+    val apiBitcoin = retrofit.create(APIBitcoin::class.java)
 }

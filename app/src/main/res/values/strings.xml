@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">BitcoinPrice</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="last_update">Útilma atualização</string>
+    <string name="value">Valor</string>
+    <string name="bitcoin_values">Cotação de bitcoin</string>
+
 </resources>

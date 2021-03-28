@@ -7,8 +7,8 @@ import br.com.texeratx.bitcoinprice.model.Value
 @Entity(tableName = "value")
 data class DatabaseValue(
     @PrimaryKey
-    val time: String,
-    val value: String
+    val time: Long,
+    val value: Double
 )
 
 fun List<DatabaseValue>.asModel(): List<Value> {
